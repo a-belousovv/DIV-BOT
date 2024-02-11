@@ -1,0 +1,35 @@
+.help {
+	@include standartBlock(50px 0px);
+	&__box {
+		@include standartFlex(column, center, flex-start);
+		gap: 40px;
+		.help__title {
+			font-family: $montserrat;
+			color: $text-color;
+			font-size: 48px;
+			text-align: center;
+			@media (max-width: $media-m) {
+				font-size: 24px;
+			}
+		}
+		.help__items {
+			width: 100%;
+			@include standartFlex(row, center, center);
+			&_item {
+				border: 1px solid #e3e4e6;
+				padding: 10px;
+				border-radius: 15px;
+				cursor: pointer;
+				@include standartFlex(row, center, space-between);
+				gap: 15px;
+				.help__item_img {
+					background-color: $blue;
+					border-radius: 10px;
+				}
+				.help__item_title {
+					font-family: $montserrat;
+				}
+			}
+		}
+	}
+}

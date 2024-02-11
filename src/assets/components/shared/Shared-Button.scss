@@ -1,0 +1,25 @@
+.shared-button {
+	width: 100%;
+	max-width: 340px;
+	padding: 25px 0px;
+	@include standartFlex(row, center, center);
+	letter-spacing: 1.5px;
+	border-radius: 10px;
+	color: $white;
+	font-family: $montserrat;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	text-decoration: none;
+	@media (max-width: $media-m) {
+		font-size: 14px;
+	}
+	&.blue {
+		background-color: $blue;
+		color: $white;
+	}
+	&.white {
+		color: $blue;
+		background-color: $white;
+	}
+}

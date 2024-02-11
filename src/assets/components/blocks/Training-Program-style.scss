@@ -1,0 +1,96 @@
+.program {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 80%;
+		background-color: #f0f0f0;
+		border-radius: 15px;
+		padding: 50px;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 30px;
+		margin: 0 auto;
+		@media (max-width: $media-m) {
+			padding: 20px;
+			width: 100%;
+		}
+		.program__header {
+			width: 100%;
+			@include standartFlex(row, center, flex-start);
+			gap: 60px;
+			@media (max-width: $media-l) {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 30px;
+			}
+			&_title {
+				font-family: $montserrat;
+				font-size: 64px;
+				letter-spacing: -1.3px;
+				color: $text-color;
+				@media (max-width: $media-m) {
+					font-size: 32px;
+				}
+			}
+			&_text-lesson-count {
+				border-radius: 10px;
+				font-family: $montserrat;
+				font-size: 20px;
+				margin-top: 10px;
+				background-color: $blue;
+				padding: 10px 30px;
+				color: $white;
+				@media (max-width: $media-m) {
+					font-size: 18px;
+				}
+			}
+		}
+		.program__items {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 15px;
+			max-height: 280px;
+			flex-wrap: wrap;
+			@media (max-width: $media-l) {
+				max-height: fit-content;
+			}
+			&_item {
+				@include standartFlex(row, center, center);
+				gap: 5px;
+				@media (max-width: $media-m) {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				.program__item_text-lesson {
+					color: $blue;
+					font-family: $montserrat;
+				}
+				.program__item_title-lesson {
+					font-family: $montserrat;
+					font-size: 18px;
+				}
+				&-bonus {
+					border: 1px solid #ced0d2;
+					border-radius: 7px;
+					padding: 10px 50px 10px 10px;
+					font-family: $montserrat;
+					font-weight: 400;
+					span {
+						color: $blue;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		.program__button {
+			background-color: $blue;
+			color: $white;
+			font-family: $montserrat;
+			padding: 20px 0px;
+			width: 30%;
+			border-radius: 10px;
+			@include standartFlex(row, center, center);
+			font-weight: 500;
+			letter-spacing: 2px;
+			cursor: pointer;
+		}
+	}
+}
