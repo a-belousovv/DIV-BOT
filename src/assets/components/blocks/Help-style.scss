@@ -22,6 +22,9 @@
 				cursor: pointer;
 				@include standartFlex(row, center, space-between);
 				gap: 15px;
+				text-decoration: none;
+				color: $black;
+				cursor: pointer;
 				.help__item_img {
 					background-color: $blue;
 					border-radius: 10px;

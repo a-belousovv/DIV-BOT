@@ -3,6 +3,8 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import {
 	changeCartCountValue,
 	changeIsOpenCart,
+	setCountryDiscountPrice,
+	setCountryPrice,
 	setTotalPrice,
 } from '../../redux/slices/CartSlice'
 
@@ -49,6 +51,12 @@ const Cart = () => {
 	const findCourseCountryTitle = geoInfo.courseCountryTitle
 	const totalPrice = cartCount * findCoursePrice
 	dispatch(setTotalPrice(`${totalPrice}${findCourseCountryTitle}`))
+	dispatch(setCountryPrice(`${findCoursePrice}${findCourseCountryTitle}`))
+	dispatch(
+		setCountryDiscountPrice(
+			`${geoInfo.courseDiscountPrice}${findCourseCountryTitle}`
+		)
+	)
 
 	return (
 		<div className={`cart ${isOpenCart ? 'show' : 'hide'}`}>

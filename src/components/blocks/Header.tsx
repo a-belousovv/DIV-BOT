@@ -16,21 +16,19 @@ const Header = () => {
 					</div>
 					<div className='header__content'>
 						<h1 className='header__title-course-name'>
-							<span>Авторский онлайн-курс</span> Алёны Белоусовой
+							<span>Авторский бот для тренировок</span> Алёны Ивановой
 						</h1>
-						<div className='header__img-background'>
-							<img src='/pictures/Header/header-picture.png' alt='' />
-						</div>
+						<p className='header__slogan'>LEVEL UP</p>
 						<h2 className='header__subtitle'>
-							<span>Набирай аудиторию, </span>закупая рекламу <br /> в
-							инстаграм-пабликах
+							<span>Стань лучшей версией себя, </span>с нашей помощью
 						</h2>
 						<div className='header__lessons'>
 							<div className='header__lessons_item'>
 								<div className='header__item_point'></div>
 								<div className='header__item_content'>
 									<h3 className='header__content_title'>
-										<span>12 уроков: </span> пошаговые инструкции с заданиями
+										<span>200+ упражнений </span> пошаговые инструкции с
+										заданиями
 									</h3>
 								</div>
 							</div>
@@ -38,7 +36,7 @@ const Header = () => {
 								<div className='header__item_point'></div>
 								<div className='header__item_content'>
 									<h3 className='header__content_title'>
-										<span>42 минуты: </span> общая длительность обучения
+										<span>Комьюнити </span> чат с единомышленниками и поддержкой
 									</h3>
 								</div>
 							</div>

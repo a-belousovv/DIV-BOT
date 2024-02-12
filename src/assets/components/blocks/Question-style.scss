@@ -23,6 +23,7 @@
 				@include standartFlex(column, flex-start, flex-start);
 				padding: 15px 0px;
 				transition: 0.4s;
+				width: 100%;
 				&.show {
 					gap: 15px;
 					.blue-button-close {

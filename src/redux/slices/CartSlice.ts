@@ -4,23 +4,28 @@ const initialState = {
 	isOpenCart: false,
 	cartCount: 1,
 	totalPrice: '',
+	countryPrice: '',
+	countryDiscountPrice: '',
 	countryArray: [
 		{
 			id: 'BelarusId',
 			title: 'Belarus',
-			coursePrice: 105,
+			coursePrice: 12,
+			courseDiscountPrice: 29,
 			courseCountryTitle: ' BYN',
 		},
 		{
 			id: 'RussiaId',
 			title: 'Russia',
-			coursePrice: 2990,
+			coursePrice: 340,
+			courseDiscountPrice: 890,
 			courseCountryTitle: 'RUS',
 		},
 		{
 			id: 'UsaId',
 			title: 'USA',
-			coursePrice: 33,
+			coursePrice: 4,
+			courseDiscountPrice: 9,
 			courseCountryTitle: 'USD',
 		},
 	],
@@ -47,9 +52,20 @@ export const CartSlice = createSlice({
 		setTotalPrice: (state, action: PayloadAction<string>) => {
 			state.totalPrice = action.payload
 		},
+		setCountryPrice: (state, action: PayloadAction<string>) => {
+			state.countryPrice = action.payload
+		},
+		setCountryDiscountPrice: (state, action: PayloadAction<string>) => {
+			state.countryDiscountPrice = action.payload
+		},
 	},
 })
 
-export const { changeIsOpenCart, changeCartCountValue, setTotalPrice } =
-	CartSlice.actions
+export const {
+	changeIsOpenCart,
+	changeCartCountValue,
+	setTotalPrice,
+	setCountryPrice,
+	setCountryDiscountPrice,
+} = CartSlice.actions
 export default CartSlice.reducer

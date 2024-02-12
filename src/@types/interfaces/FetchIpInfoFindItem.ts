@@ -3,4 +3,5 @@ export interface FetchIpInfoFindItem {
 	title: string
 	coursePrice: number
 	courseCountryTitle: string
+	courseDiscountPrice: number
 }
