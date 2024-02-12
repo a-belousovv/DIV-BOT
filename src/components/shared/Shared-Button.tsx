@@ -1,10 +1,5 @@
 import React from 'react'
-
-interface SharedButtonProps {
-	color: string
-	text: string
-	href: string
-}
+import { SharedButtonProps } from '../../@types/props/SharedButtonProps'
 
 const SharedButton: React.FC<SharedButtonProps> = ({ color, text, href }) => {
 	return (

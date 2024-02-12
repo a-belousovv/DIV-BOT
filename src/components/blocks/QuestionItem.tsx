@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BlueButtonClose from '../shared/Blue-Button-Close'
 
 const QuestionItem = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -8,7 +9,7 @@ const QuestionItem = () => {
 				<p className='question__header_title'>
 					Какой нужен бюджет на закупку рекламы?
 				</p>
-				<div className='question__header_button'></div>
+				<BlueButtonClose />
 			</div>
 			<div className='question__item_content'>
 				<div className='question__content_item'>

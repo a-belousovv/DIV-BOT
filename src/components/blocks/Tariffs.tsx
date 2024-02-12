@@ -1,4 +1,8 @@
+import { useAppDispatch } from '../../redux/hooks'
+import { changeIsOpenCart } from '../../redux/slices/CartSlice'
+
 const Tariffs = () => {
+	const dispatch = useAppDispatch()
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
@@ -26,7 +30,11 @@ const Tariffs = () => {
 								)
 							})}
 						</div>
-						<div className='tariffs__button'>ОПЛАТИТЬ УЧАСТИЕ</div>
+						<div
+							className='tariffs__button'
+							onClick={() => dispatch(changeIsOpenCart(true))}>
+							ОПЛАТИТЬ УЧАСТИЕ
+						</div>
 					</div>
 				</div>
 			</div>

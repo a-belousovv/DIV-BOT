@@ -1,0 +1,27 @@
+.blue-button-close {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	cursor: pointer;
+	transition: 0.5s;
+	border-radius: 50%;
+
+	&::before {
+		content: '';
+		width: 1px;
+		height: 50%;
+		background-color: $blue;
+		position: absolute;
+		transform: translateY(-50%) translateX(20px);
+		top: 50%;
+	}
+	&::after {
+		content: '';
+		width: 50%;
+		height: 1px;
+		background-color: $blue;
+		position: absolute;
+		transform: translateY(20px) translateX(-50%);
+		left: 50%;
+	}
+}
