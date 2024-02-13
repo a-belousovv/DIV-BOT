@@ -5,7 +5,7 @@ const Result = () => {
 		<div className='result'>
 			<div className='block-container'>
 				<div className='result__box'>
-					<h3 className='result__title'>Мой результат</h3>
+					<h3 className='result__title'>Мой продукты очень любят</h3>
 					<h4 className='result__subtitle'>
 						<span>+20.000 подписчиков </span>
 						за 6 месяцев
@@ -15,7 +15,7 @@ const Result = () => {
 					</p>
 					<div className='result__img'>
 						<img src='/pictures/Result/Result-Instagram-picture.png' alt='' />
-						<SharedButton href='#tariffs' color='blue' text='ХОЧУ В ОБУЧЕНИЕ' />
+						<SharedButton href='#tariffs' color='blue' text='ОПЛАТИТЬ' />
 					</div>
 				</div>
 			</div>

@@ -1,11 +1,11 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { CartFormInterface } from '../../@types/interfaces/CartFormInterface'
-import { useAppSelector } from '../../redux/hooks'
+import { CartFormInterface } from '../../@types/interfaces/CartInterfaces/types'
+
 const CartForm = () => {
 	const { register, handleSubmit } = useForm<CartFormInterface>()
-	const totalPrice = useAppSelector((state) => state.cart.totalPrice)
+
 	const onSubmit: SubmitHandler<CartFormInterface> = (data) => {
-		console.log({ ...data, totalPrice: totalPrice })
+		console.log({ ...data, totalPrice: 0 })
 	}
 	return (
 		<form action='' className='cart__form' onSubmit={handleSubmit(onSubmit)}>

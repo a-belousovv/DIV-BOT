@@ -1,4 +1,9 @@
 export interface questionItemProps {
 	title: string
-	content: string[]
+	content: qustionItemContent[]
+}
+
+export interface qustionItemContent {
+	title: string
+	id: string
 }

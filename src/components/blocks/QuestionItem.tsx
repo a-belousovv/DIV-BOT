@@ -13,9 +13,9 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 			<div className='question__item_content'>
 				{content.map((item) => {
 					return (
-						<div className='question__content_item'>
+						<div className='question__content_item' key={item.id}>
 							<div className='question__item_point'></div>
-							<p className='question__item_text'>{item}</p>
+							<p className='question__item_text'>{item.title}</p>
 						</div>
 					)
 				})}

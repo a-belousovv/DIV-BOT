@@ -28,21 +28,21 @@ const TrainingProgram = () => {
 				<div className='program__box'>
 					<div className='program__header'>
 						<h3 className='program__header_title'>Что умеет это бот</h3>
-						<p className='program__header_text-lesson-count'>12 УРОКОВ</p>
+						<p className='program__header_text-lesson-count'>5 действий</p>
 					</div>
 					<div className='program__items'>
 						{trainingProgramItems.map((item) => {
 							return (
 								<div className='program__items_item' key={item.id}>
-									<p className='program__item_text-lesson'>Урок {item.id}.</p>
+									<p className='program__item_point'></p>
 									<p className='program__item_title-lesson'>{item.title}</p>
 								</div>
 							)
 						})}
 						<div className='program__items_item-bonus'>
 							<p className='program__item_text-lesson'>
-								<span>+ Бонусный урок: </span> Чат с комьюнити <br />{' '}
-								подписчиков бота (на время подписки)
+								<span>+ БОНУС </span> Чат с комьюнити <br /> подписчиков бота
+								(на время подписки)
 							</p>
 						</div>
 					</div>

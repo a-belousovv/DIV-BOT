@@ -1,8 +1,4 @@
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { changeIsOpenCart } from '../../redux/slices/CartSlice'
-
 const Tariffs = () => {
-	const dispatch = useAppDispatch()
 	const tariffsItems = [
 		{ id: '1', title: 'Подписка на бот LEVEL UP в течении 1 месяца;' },
 		{
@@ -12,12 +8,6 @@ const Tariffs = () => {
 		{ id: '3', title: 'Обратная связь от Алены или ее ассистента в чате;' },
 		{ id: '4', title: 'Доступ к базе материалов.' },
 	]
-
-	const coutryPrice = useAppSelector((state) => state.cart.countryPrice)
-	const coutryPriceDiscount = useAppSelector(
-		(state) => state.cart.countryDiscountPrice
-	)
-
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
@@ -28,9 +18,9 @@ const Tariffs = () => {
 						</h3>
 						<div className='tariffs__left_prices'>
 							<p className='tariffs__prices_price tariffs__prices_price-discount'>
-								{coutryPriceDiscount}
+								26 BYN
 							</p>
-							<p className='tariffs__prices_price'>{coutryPrice}</p>
+							<p className='tariffs__prices_price'>19 BYN</p>
 						</div>
 					</div>
 					<div className='tariffs__right'>
@@ -45,11 +35,7 @@ const Tariffs = () => {
 								)
 							})}
 						</div>
-						<div
-							className='tariffs__button'
-							onClick={() => dispatch(changeIsOpenCart(true))}>
-							ОПЛАТИТЬ УЧАСТИЕ
-						</div>
+						<div className='tariffs__button'>ОПЛАТИТЬ УЧАСТИЕ</div>
 					</div>
 				</div>
 			</div>

@@ -61,9 +61,11 @@
 					align-items: flex-start;
 					gap: 15px;
 				}
-				.program__item_text-lesson {
-					color: $blue;
-					font-family: $montserrat;
+				.program__item_point {
+					background-color: $blue;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
 				}
 				.program__item_title-lesson {
 					font-family: $montserrat;
