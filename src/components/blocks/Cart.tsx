@@ -56,7 +56,7 @@ const Cart = () => {
 					price: 4,
 					priceTitle: 'USD',
 				})
-			dispatch(setUserCountryFindData(findItem))
+			if (findItem) dispatch(setUserCountryFindData(findItem))
 		} catch (e) {
 			console.error(e)
 		}

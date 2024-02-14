@@ -44,9 +44,8 @@ export const CartSlice = createSlice({
 			const findItem = state.cart.find((item) => item.id == action.payload.id)
 			if (findItem) {
 				findItem.count++
-			} else {
-				state.cart.push(action.payload)
 			}
+			state.cart.push(action.payload)
 		},
 		incrementCartItemCount: (state, action: PayloadAction<string>) => {
 			const findItem = state.cart.find(

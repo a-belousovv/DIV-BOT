@@ -10,7 +10,7 @@ export interface СartSliceState {
 	userCountry: string
 	coursePriceData: coursePriceDataItem[]
 	userCountryFindData: coursePriceDataItem
-	cart: cartItem[] | []
+	cart: cartItem[]
 	totalPrice: number
 	totalCount: number
 }

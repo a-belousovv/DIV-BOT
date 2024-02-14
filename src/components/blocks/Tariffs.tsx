@@ -1,3 +1,4 @@
+import { cartItem } from '../../@types/interfaces/CartInterfaces/types'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { addNewCartItem, setIsOpenCart } from '../../redux/slices/CartSlice'
 
@@ -20,7 +21,7 @@ const Tariffs = () => {
 
 	const handleClick = () => {
 		dispatch(setIsOpenCart(true))
-		const newCartItem = {
+		const newCartItem: cartItem = {
 			count: 1,
 			courseTitle: tariff,
 			discountPrice: userCountryData.discountPrice,
