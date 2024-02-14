@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { CartFormInterface } from '../../@types/interfaces/CartInterfaces/types'
-import { useAppSelector } from '../../redux/hooks'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { clearCart } from '../../redux/slices/CartSlice'
 
 const CartForm = () => {
 	const cart = useAppSelector((state) => state.cart.cart)
@@ -11,6 +12,8 @@ const CartForm = () => {
 	)
 	const { register, handleSubmit, reset } = useForm<CartFormInterface>()
 
+	const dispatch = useAppDispatch()
+
 	const onSubmit: SubmitHandler<CartFormInterface> = (data) => {
 		console.log({
 			...data,
@@ -20,6 +23,7 @@ const CartForm = () => {
 		})
 		alert('Ваша заявка успешно принята')
 		reset()
+		dispatch(clearCart())
 	}
 	return (
 		<form action='' className='cart__form' onSubmit={handleSubmit(onSubmit)}>

@@ -79,6 +79,9 @@ export const CartSlice = createSlice({
 		setTotalCount: (state, actions: PayloadAction<number>) => {
 			state.totalCount = actions.payload
 		},
+		clearCart: (state) => {
+			state.cart = []
+		},
 	},
 })
 
@@ -93,4 +96,5 @@ export const {
 	deleteCartItem,
 	setTotalPrice,
 	setTotalCount,
+	clearCart,
 } = CartSlice.actions
