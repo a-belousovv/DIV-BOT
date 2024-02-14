@@ -1,4 +1,11 @@
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { addNewCartItem, setIsOpenCart } from '../../redux/slices/CartSlice'
+
 const Tariffs = () => {
+	const dispatch = useAppDispatch()
+	const userCountryData = useAppSelector(
+		(state) => state.cart.userCountryFindData
+	)
 	const tariffsItems = [
 		{ id: '1', title: 'Подписка на бот LEVEL UP в течении 1 месяца;' },
 		{
@@ -8,6 +15,22 @@ const Tariffs = () => {
 		{ id: '3', title: 'Обратная связь от Алены или ее ассистента в чате;' },
 		{ id: '4', title: 'Доступ к базе материалов.' },
 	]
+
+	const tariff = 'tariff-single'
+
+	const handleClick = () => {
+		dispatch(setIsOpenCart(true))
+		const newCartItem = {
+			count: 1,
+			courseTitle: tariff,
+			discountPrice: userCountryData.discountPrice,
+			id: `${tariff}-id`,
+			price: userCountryData.price,
+			priceTitle: userCountryData.priceTitle,
+		}
+		dispatch(addNewCartItem(newCartItem))
+	}
+
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
@@ -35,7 +58,9 @@ const Tariffs = () => {
 								)
 							})}
 						</div>
-						<div className='tariffs__button'>ОПЛАТИТЬ УЧАСТИЕ</div>
+						<div className='tariffs__button' onClick={() => handleClick()}>
+							ОПЛАТИТЬ УЧАСТИЕ
+						</div>
 					</div>
 				</div>
 			</div>

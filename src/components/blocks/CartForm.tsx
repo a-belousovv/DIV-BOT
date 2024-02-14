@@ -1,11 +1,25 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { CartFormInterface } from '../../@types/interfaces/CartInterfaces/types'
+import { useAppSelector } from '../../redux/hooks'
 
 const CartForm = () => {
-	const { register, handleSubmit } = useForm<CartFormInterface>()
+	const cart = useAppSelector((state) => state.cart.cart)
+	const totalPrice = useAppSelector((state) => state.cart.totalPrice)
+	const totalCount = useAppSelector((state) => state.cart.totalCount)
+	const userCountryFindData = useAppSelector(
+		(state) => state.cart.userCountryFindData
+	)
+	const { register, handleSubmit, reset } = useForm<CartFormInterface>()
 
 	const onSubmit: SubmitHandler<CartFormInterface> = (data) => {
-		console.log({ ...data, totalPrice: 0 })
+		console.log({
+			...data,
+			totalPrice: `${totalPrice} ${userCountryFindData.priceTitle}`,
+			totalCount: totalCount,
+			cart: cart,
+		})
+		alert('Ваша заявка успешно принята')
+		reset()
 	}
 	return (
 		<form action='' className='cart__form' onSubmit={handleSubmit(onSubmit)}>
@@ -26,7 +40,7 @@ const CartForm = () => {
 					{...register('phone')}
 					type='number'
 					className='cart__form_input'
-					placeholder='+7 (999) 999-999-99'
+					placeholder='+375293912716'
 				/>
 			</div>
 			<div className='cart__form_item'>

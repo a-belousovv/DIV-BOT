@@ -86,6 +86,13 @@
 				}
 			}
 		}
+		.cart__empty {
+			width: 100%;
+			@include standartFlex(row, center, center);
+			gap: 10px;
+			font-family: $montserrat;
+			font-weight: 600;
+		}
 		.cart__totalPrice {
 			width: 100%;
 			@include standartFlex(row, center, flex-end);

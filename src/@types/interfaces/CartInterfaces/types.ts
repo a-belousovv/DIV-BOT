@@ -4,18 +4,29 @@ export interface CartFormInterface {
 	telegram: string
 	email: string
 }
-export interface FetchIpInfoFindItem {
-	id: string
-	title: string
-	coursePrice: number
-	courseCountryTitle: string
-	courseDiscountPrice: number
-}
 
 export interface СartSliceState {
 	isOpenCart: boolean
-	cartCount: number
-	totalPrice: string
-	chooseCountry: FetchIpInfoFindItem
-	countryArray: FetchIpInfoFindItem[]
+	userCountry: string
+	coursePriceData: coursePriceDataItem[]
+	userCountryFindData: coursePriceDataItem
+	cart: cartItem[] | []
+	totalPrice: number
+	totalCount: number
+}
+
+export interface coursePriceDataItem {
+	id: string
+	discountPrice: string
+	price: number
+	priceTitle: string
+}
+
+export interface cartItem {
+	count: number
+	price: number
+	priceTitle: string
+	id: string
+	discountPrice: string
+	courseTitle: string
 }
