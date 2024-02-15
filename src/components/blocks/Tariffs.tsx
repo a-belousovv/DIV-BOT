@@ -1,12 +1,8 @@
-import { cartItem } from '../../@types/interfaces/CartInterfaces/types'
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { addNewCartItem, setIsOpenCart } from '../../redux/slices/CartSlice'
+import { useAppDispatch } from '../../redux/hooks'
+import { setChoosesCourse, setIsOpenCart } from '../../redux/slices/CartSlice'
 
 const Tariffs = () => {
 	const dispatch = useAppDispatch()
-	const userCountryData = useAppSelector(
-		(state) => state.cart.userCountryFindData
-	)
 	const tariffsItems = [
 		{ id: '1', title: 'Подписка на бот LEVEL UP в течении 1 месяца;' },
 		{
@@ -21,15 +17,7 @@ const Tariffs = () => {
 
 	const handleClick = () => {
 		dispatch(setIsOpenCart(true))
-		const newCartItem: cartItem = {
-			count: 1,
-			courseTitle: tariff,
-			discountPrice: userCountryData.discountPrice,
-			id: `${tariff}-id`,
-			price: userCountryData.price,
-			priceTitle: userCountryData.priceTitle,
-		}
-		dispatch(addNewCartItem(newCartItem))
+		dispatch(setChoosesCourse(`${tariff}-id`))
 	}
 
 	return (

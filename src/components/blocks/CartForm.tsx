@@ -1,29 +1,17 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { CartFormInterface } from '../../@types/interfaces/CartInterfaces/types'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { clearCart } from '../../redux/slices/CartSlice'
+import { setIsOpenCart } from '../../redux/slices/CartSlice'
 
 const CartForm = () => {
-	const cart = useAppSelector((state) => state.cart.cart)
-	const totalPrice = useAppSelector((state) => state.cart.totalPrice)
-	const totalCount = useAppSelector((state) => state.cart.totalCount)
-	const userCountryFindData = useAppSelector(
-		(state) => state.cart.userCountryFindData
-	)
 	const { register, handleSubmit, reset } = useForm<CartFormInterface>()
-
+	const activeCourse = useAppSelector((state) => state.cart.activeCourse)
 	const dispatch = useAppDispatch()
-
 	const onSubmit: SubmitHandler<CartFormInterface> = (data) => {
-		console.log({
-			...data,
-			totalPrice: `${totalPrice} ${userCountryFindData.priceTitle}`,
-			totalCount: totalCount,
-			cart: cart,
-		})
-		alert('Ваша заявка успешно принята')
+		console.log({ ...data, ...activeCourse, date: new Date() })
 		reset()
-		dispatch(clearCart())
+		alert('Ваша заявка успешно принята')
+		dispatch(setIsOpenCart(false))
 	}
 	return (
 		<form action='' className='cart__form' onSubmit={handleSubmit(onSubmit)}>

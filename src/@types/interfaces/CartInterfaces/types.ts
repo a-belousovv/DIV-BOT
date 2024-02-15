@@ -7,26 +7,22 @@ export interface CartFormInterface {
 
 export interface СartSliceState {
 	isOpenCart: boolean
-	userCountry: string
-	coursePriceData: coursePriceDataItem[]
-	userCountryFindData: coursePriceDataItem
-	cart: cartItem[]
-	totalPrice: number
-	totalCount: number
+	choosesCourse: string
+	choosesUserCountry: string
+	courses: CourseItem[]
+	activeCourse: CountriesItem
 }
 
-export interface coursePriceDataItem {
+export interface CourseItem {
 	id: string
-	discountPrice: string
-	price: number
-	priceTitle: string
+	courseTitle: string
+	countries: CountriesItem[]
 }
 
-export interface cartItem {
-	count: number
-	price: number
-	priceTitle: string
+export interface CountriesItem {
 	id: string
-	discountPrice: string
+	price: number
+	discountPrice: number
+	priceTitle: string
 	courseTitle: string
 }
