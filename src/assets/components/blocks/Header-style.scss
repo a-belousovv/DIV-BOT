@@ -1,5 +1,5 @@
 .header {
-	@include standartBlock(30px 0px);
+	@include standartBlock(0px 0px);
 	height: 1000px;
 	.block-container {
 		height: 100%;
@@ -40,18 +40,23 @@
 			position: relative;
 			z-index: 100;
 		}
+		.header__content_slogan {
+			@include standartFlex(column, center, flex-start);
+			gap: 6px;
+		}
 		.header__title-course-name {
 			font-family: $montserrat;
 			font-size: 16px;
 			color: $text-color;
 			font-weight: 400;
 			text-align: center;
+			letter-spacing: 1.7px;
 			span {
 				color: $black;
 				font-weight: 600;
 			}
 		}
-		.header__slogan {
+		.header__slogan_text {
 			font-family: $montserrat;
 			font-size: 100px;
 			color: #3e4c5c;
@@ -71,7 +76,7 @@
 		.header__lessons {
 			@include standartFlex(row, flex-start, center);
 			gap: 15px;
-			margin-top: 40px;
+
 			width: 100%;
 			max-width: 600px;
 			height: 68px;

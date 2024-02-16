@@ -19,11 +19,11 @@ const Header = () => {
 						/>
 					</div>
 					<div className='header__content'>
-						<div>
-							<p className='header__slogan'>ᗪIᐯ'ный бот</p>
+						<div className='header__content_slogan'>
+							<p className='header__slogan_text'>ᗪIᐯ'ный бот</p>
 							<h1 className='header__title-course-name'>
-								<span>авторский бот</span> с тренировками для зала и дома Алёны
-								Окотчик
+								<span>авторский бот</span> Алёны Окотчик с тренировками для зала
+								и дома
 							</h1>
 						</div>
 						<h2 className='header__subtitle'>
