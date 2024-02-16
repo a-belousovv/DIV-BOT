@@ -1,0 +1,51 @@
+.public-contract {
+	@include standartBlock(75px 0px);
+	.block-container {
+		max-width: 800px;
+	}
+	&__box {
+		width: 100%;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 30px;
+		.public-contract__title {
+			width: 100%;
+			text-align: center;
+			font-family: $montserrat;
+			font-weight: 300;
+			font-size: 24px;
+		}
+		.public-contract__info {
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 10px;
+		}
+		.public-contract__text {
+			font-family: $montserrat;
+			font-weight: 300;
+			font-size: 20px;
+			text-align: justify;
+			line-height: 35px;
+		}
+		.public-contract__list {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 20px;
+			&_item {
+				width: 100%;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 10px;
+				.public-contract__item_title {
+					font-family: $montserrat;
+					font-weight: 300;
+					font-size: 24px;
+				}
+				.public-contract__item_text {
+					font-weight: 300;
+					font-family: $montserrat;
+					font-size: 20px;
+					text-align: justify;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+}

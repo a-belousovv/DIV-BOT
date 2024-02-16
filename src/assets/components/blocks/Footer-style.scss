@@ -1,0 +1,23 @@
+.footer {
+	@include standartBlock(50px 0px);
+	background-color: $black;
+	&__box {
+		width: 100%;
+		@include standartFlex(row, center, center);
+		gap: 30px;
+		.footer__item {
+			@include standartFlex(row, center, center);
+			&_text {
+				color: #f0f0f0;
+				font-family: $montserrat;
+				font-weight: 500;
+				transition: 0.3s;
+				cursor: pointer;
+				text-decoration: none;
+				&:hover {
+					color: #4587f7;
+				}
+			}
+		}
+	}
+}

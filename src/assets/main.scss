@@ -12,7 +12,12 @@
 @import './components/blocks/Question-style.scss';
 @import './components/blocks/Help-style.scss';
 @import './components/blocks/Cart-style.scss';
+@import './components/blocks/Footer-style.scss';
 
 //IMPORT SHARED
 @import './components/shared/Shared-Button.scss';
 @import './components/shared/Blue-Button-Close.scss';
+
+//IMPORT PAGES
+@import './pages/Security-style.scss';
+@import './pages/Contract-style.scss';

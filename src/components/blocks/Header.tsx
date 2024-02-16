@@ -5,20 +5,27 @@ const Header = () => {
 		<div className='header'>
 			<div className='block-container'>
 				<div className='header__box'>
-					<div className='header__lines-background'>
+					<div className='header__background'>
 						<img
-							src='/backgrounds/Header/header-lines-background.jpeg'
+							// src='/backgrounds/Header/header-bg-3.jpg'
+							src='/backgrounds/Header/_DSC0172.jpg'
+							alt=''
+							className='header__background header__background-laptop'
+						/>
+						<img
+							src='/backgrounds/Header/header-bg-media-3.jpg'
+							className='header__background header__background-mobile'
 							alt=''
 						/>
 					</div>
-					<div className='header__waves-background'>
-						<img src='/backgrounds/Header/header-waves-background.svg' alt='' />
-					</div>
 					<div className='header__content'>
-						<h1 className='header__title-course-name'>
-							<span>Авторский бот для тренировок</span> Алёны Ивановой
-						</h1>
-						<p className='header__slogan'>LEVEL UP</p>
+						<div>
+							<p className='header__slogan'>ᗪIᐯ'ный бот</p>
+							<h1 className='header__title-course-name'>
+								<span>авторский бот</span> с тренировками для зала и дома Алёны
+								Окотчик
+							</h1>
+						</div>
 						<h2 className='header__subtitle'>
 							<span>Стань лучшей версией себя, </span>с нашей помощью
 						</h2>
@@ -27,7 +34,7 @@ const Header = () => {
 								<div className='header__item_point'></div>
 								<div className='header__item_content'>
 									<h3 className='header__content_title'>
-										<span>200+ упражнений </span> пошаговые инструкции с
+										<span>320+ упражнений </span> пошаговые инструкции с
 										заданиями
 									</h3>
 								</div>

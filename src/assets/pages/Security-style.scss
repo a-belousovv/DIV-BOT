@@ -1,0 +1,39 @@
+.security-page {
+	@include standartBlock(100px 0px);
+	.block-container {
+		max-width: 1400px;
+	}
+	&__button {
+		font-family: $montserrat;
+		text-decoration: none;
+		color: $black;
+		background-color: $blue;
+		color: $white;
+		font-family: $montserrat;
+		padding: 10px 30px;
+		border-radius: 15px;
+		font-weight: 600;
+
+		@media (max-width: $media-m) {
+			top: -5%;
+		}
+	}
+	.security-page__box {
+		width: 100%;
+		@include standartFlex(column, flex-start, center);
+		gap: 30px;
+		position: relative;
+
+		.security-page__title {
+			font-family: $montserrat;
+			font-weight: 600;
+			font-size: 30px;
+			text-align: justify;
+		}
+		.security-page__text {
+			font-family: $montserrat;
+			text-align: justify;
+			font-size: 20px;
+		}
+	}
+}
