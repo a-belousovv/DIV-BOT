@@ -76,7 +76,6 @@
 		.header__lessons {
 			@include standartFlex(row, flex-start, center);
 			gap: 15px;
-
 			width: 100%;
 			max-width: 600px;
 			height: 68px;
