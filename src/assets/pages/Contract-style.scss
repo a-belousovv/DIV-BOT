@@ -6,7 +6,7 @@
 	&__box {
 		width: 100%;
 		@include standartFlex(column, flex-start, flex-start);
-		gap: 30px;
+		gap: 20px;
 		.public-contract__title {
 			width: 100%;
 			text-align: center;
@@ -28,7 +28,7 @@
 		.public-contract__list {
 			width: 100%;
 			@include standartFlex(column, flex-start, flex-start);
-			gap: 20px;
+			gap: 60px;
 			&_item {
 				width: 100%;
 				@include standartFlex(column, flex-start, flex-start);

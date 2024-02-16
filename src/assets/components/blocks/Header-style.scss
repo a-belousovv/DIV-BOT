@@ -44,8 +44,9 @@
 			z-index: 100;
 		}
 		.header__content_slogan {
-			@include standartFlex(column, center, flex-start);
+			@include standartFlex(column, right, flex-start);
 			gap: 6px;
+			padding-top: 180px;
 		}
 		.header__title-course-name {
 			font-family: $montserrat;
@@ -62,12 +63,18 @@
 		.header__slogan_text {
 			font-family: $montserrat;
 			font-size: 100px;
-			color: #3e4c5c;
 			font-weight: 600;
 			line-height: 90%;
+			padding: 10px;
+			border-radius: 15px;
 			@media (max-width: $media-m) {
 				font-size: 80px;
 			}
+			letter-spacing: 1.2px;
+			font-weight: 300;
+			color: $black;
+			-webkit-text-stroke: 1px #282828;
+			text-shadow: 0px 4px 4px #282828;
 		}
 		.header__subtitle {
 			font-family: $montserrat;
@@ -93,14 +100,15 @@
 			&_item {
 				width: 100%;
 				height: 100%;
-				background-color: $white;
+				background-color: #f1f2f2cc;
+
 				border-radius: 15px;
 				padding: 10px;
 				@include standartFlex(row, center, space-between);
 				gap: 15px;
 				max-width: 250px;
 				.header__item_point {
-					background-color: $blue;
+					background-color: $red;
 					border-radius: 50%;
 					min-width: 10px;
 					height: 10px;
@@ -132,7 +140,7 @@
 			cursor: pointer;
 			text-decoration: none;
 			&-blue {
-				background-color: $blue;
+				background-color: $red;
 			}
 			&-white {
 				color: $black;

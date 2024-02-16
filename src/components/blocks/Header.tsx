@@ -8,7 +8,7 @@ const Header = () => {
 					<div className='header__background'>
 						<img
 							// src='/backgrounds/Header/header-bg-3.jpg'
-							src='/backgrounds/Header/_DSC0172.jpg'
+							src='/backgrounds/Header/header-bg-laptop.jpg'
 							alt=''
 							className='header__background header__background-laptop'
 						/>
@@ -26,9 +26,7 @@ const Header = () => {
 								и дома
 							</h1>
 						</div>
-						<h2 className='header__subtitle'>
-							<span>Стань лучшей версией себя, </span>с нашей помощью
-						</h2>
+
 						<div className='header__lessons'>
 							<div className='header__lessons_item'>
 								<div className='header__item_point'></div>
@@ -48,6 +46,9 @@ const Header = () => {
 								</div>
 							</div>
 						</div>
+						<h2 className='header__subtitle'>
+							ты приятно <span> УДИВИШЬСЯ </span>результату тренировок
+						</h2>
 						<SharedButton href='#tariffs' text='УЧАСТВОВАТЬ' color='blue' />
 						<a href='#program' className='header__button header__button-white'>
 							СМОТРЕТЬ ПРОГРАММУ

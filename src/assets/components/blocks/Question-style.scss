@@ -74,7 +74,7 @@
 							content: '';
 							width: 1px;
 							height: 50%;
-							background-color: $blue;
+							background-color: $red;
 							position: absolute;
 							transform: translateY(-50%) translateX(20px);
 							top: 50%;
@@ -83,7 +83,7 @@
 							content: '';
 							width: 50%;
 							height: 1px;
-							background-color: $blue;
+							background-color: $red;
 							position: absolute;
 							transform: translateY(20px) translateX(-50%);
 							left: 50%;
@@ -99,8 +99,8 @@
 						@include standartFlex(row, center, flex-start);
 						gap: 10px;
 						.question__item_point {
-							width: 7px;
-							height: 5px;
+							min-width: 5px;
+							min-height: 5px;
 							background-color: $black;
 							border-radius: 50%;
 						}

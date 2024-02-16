@@ -4,7 +4,7 @@ import { setChoosesCourse, setIsOpenCart } from '../../redux/slices/CartSlice'
 const Tariffs = () => {
 	const dispatch = useAppDispatch()
 	const tariffsItems = [
-		{ id: '1', title: 'Подписка на бот LEVEL UP в течении 1 месяца;' },
+		{ id: '1', title: "Подписка на ᗪIᐯ'ный бот в течении 1 месяца;" },
 		{
 			id: '2',
 			title: 'Чат участников для обмена опытом, вдохновения и мотивации;',

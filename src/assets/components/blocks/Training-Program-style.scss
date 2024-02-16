@@ -35,7 +35,7 @@
 				font-family: $montserrat;
 				font-size: 20px;
 				margin-top: 10px;
-				background-color: $blue;
+				background-color: $red;
 				padding: 10px 30px;
 				color: $white;
 				@media (max-width: $media-m) {
@@ -62,7 +62,7 @@
 					gap: 15px;
 				}
 				.program__item_point {
-					background-color: $blue;
+					background-color: $red;
 					width: 10px;
 					height: 10px;
 					border-radius: 50%;
@@ -79,14 +79,14 @@
 					font-family: $montserrat;
 					font-weight: 400;
 					span {
-						color: $blue;
+						color: $red;
 						font-weight: 600;
 					}
 				}
 			}
 		}
 		.program__button {
-			background-color: $blue;
+			background-color: $red;
 			color: $white;
 			font-family: $montserrat;
 			padding: 20px 0px;
