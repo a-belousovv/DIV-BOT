@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../redux/hooks'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { setChoosesCourse, setIsOpenCart } from '../../redux/slices/CartSlice'
 
 const Tariffs = () => {
@@ -14,12 +14,18 @@ const Tariffs = () => {
 	]
 
 	const tariff = 'tariff-single'
+	const choosesUserCountry = useAppSelector(
+		(state) => state.cart.choosesUserCountry
+	)
+	const findCourse = useAppSelector((state) => state.cart.courses)
+		.find((item) => item.courseTitle == tariff)
+		?.countries.find((item) => item.id == choosesUserCountry)
 
 	const handleClick = () => {
 		dispatch(setIsOpenCart(true))
 		dispatch(setChoosesCourse(`${tariff}-id`))
 	}
-
+	if (!findCourse) return null
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
@@ -30,9 +36,11 @@ const Tariffs = () => {
 						</h3>
 						<div className='tariffs__left_prices'>
 							<p className='tariffs__prices_price tariffs__prices_price-discount'>
-								26 BYN
+								{findCourse.discountPrice} {findCourse.priceTitle}
 							</p>
-							<p className='tariffs__prices_price'>19 BYN</p>
+							<p className='tariffs__prices_price'>
+								{findCourse.price} {findCourse.priceTitle}
+							</p>
 						</div>
 					</div>
 					<div className='tariffs__right'>
