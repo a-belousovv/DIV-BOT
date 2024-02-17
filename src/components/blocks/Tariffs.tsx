@@ -17,7 +17,7 @@ const Tariffs = () => {
 	const choosesUserCountry = useAppSelector(
 		(state) => state.cart.choosesUserCountry
 	)
-	const findCourse = useAppSelector((state) => state.cart.courses)
+	let findCourse = useAppSelector((state) => state.cart.courses)
 		.find((item) => item.courseTitle == tariff)
 		?.countries.find((item) => item.id == choosesUserCountry)
 
@@ -25,7 +25,14 @@ const Tariffs = () => {
 		dispatch(setIsOpenCart(true))
 		dispatch(setChoosesCourse(`${tariff}-id`))
 	}
-	if (!findCourse) return null
+	if (!findCourse)
+		findCourse = {
+			id: 'Usa',
+			price: 4,
+			discountPrice: 9,
+			priceTitle: 'USD',
+			courseTitle: 'Тариф Единый',
+		}
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
