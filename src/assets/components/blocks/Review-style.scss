@@ -4,9 +4,16 @@
 		width: 100%;
 		@include standartFlex(row-reverse, center, flex-start);
 		gap: 30px;
+		@media (max-width: $media-m) {
+			flex-direction: column;
+		}
 		.review__content {
 			@include standartFlex(column, flex-start, flex-start);
 			gap: 30px;
+			width: 60%;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
 		}
 		.review__title {
 			font-family: $montserrat;
@@ -18,9 +25,15 @@
 			font-size: 24px;
 		}
 		.review__img {
-			width: 100%;
+			width: 30%;
 			height: fit-content;
 			object-fit: cover;
+			@media (max-width: $media-m) {
+				width: 80%;
+			}
+			@media (max-width: $media-s) {
+				width: 100%;
+			}
 		}
 	}
 }

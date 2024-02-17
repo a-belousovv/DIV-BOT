@@ -6,13 +6,15 @@
 		@include standartFlex(column, center, flex-start);
 		padding: 0px 30px;
 		gap: 30px;
-
+		max-width: 1800px;
+		margin: 0 auto;
 		.footer__top {
 			width: 100%;
 			@include standartFlex(row, center, center);
 			gap: 240px;
 			@media (max-width: $media-m) {
 				flex-direction: column;
+				gap: 30px;
 			}
 			.footer__content_item {
 				.footer__item_text {
