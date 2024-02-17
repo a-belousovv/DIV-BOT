@@ -2,8 +2,8 @@
 	@include standartBlock(50px 0px);
 	&__box {
 		width: 100%;
-		@include standartFlex(row-reverse, center, flex-start);
-		gap: 30px;
+		@include standartFlex(row-reverse, center, center);
+		gap: 60px;
 		@media (max-width: $media-m) {
 			flex-direction: column;
 		}
@@ -25,7 +25,7 @@
 			font-size: 24px;
 		}
 		.review__img {
-			width: 30%;
+			width: 15%;
 			height: fit-content;
 			object-fit: cover;
 			@media (max-width: $media-m) {
