@@ -118,6 +118,7 @@
 					.header__content_title {
 						font-family: $montserrat;
 						font-size: 15px;
+						@include standartFlex(column, flex-start, flex-start);
 						span {
 							font-weight: 600;
 						}
