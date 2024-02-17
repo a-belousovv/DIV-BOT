@@ -1,0 +1,26 @@
+.review {
+	@include standartBlock(50px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(row-reverse, center, flex-start);
+		gap: 30px;
+		.review__content {
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 30px;
+		}
+		.review__title {
+			font-family: $montserrat;
+			font-size: 40px;
+			color: $text-color;
+		}
+		.review__text {
+			font-family: $montserrat;
+			font-size: 24px;
+		}
+		.review__img {
+			width: 100%;
+			height: fit-content;
+			object-fit: cover;
+		}
+	}
+}

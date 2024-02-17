@@ -1,32 +1,23 @@
 .result {
 	@include standartBlock(50px 0px);
-	&__box {
-		width: 100%;
-		@include standartFlex(column, center, flex-start);
-		gap: 30px;
-		.result__title {
-			font-family: $montserrat;
-			font-size: 48px;
-			color: $text-color;
+	.swiper-button-prev::after,
+	.swiper-button-next::after {
+		color: $red;
+	}
+	&__slider_item {
+		width: 80%;
+		min-height: 500px;
+		margin: 0 auto;
+		@include standartFlex(row, center, center);
+		flex-wrap: wrap;
+		@media (max-width: $media-m) {
+			flex-direction: column;
+			gap: 30px;
 		}
-		.result__subtitle {
-			font-family: $montserrat;
-			font-size: 30px;
-			span {
-				font-weight: 600;
-			}
-			font-weight: 400;
-		}
-		.result__text {
-			font-family: $montserrat;
-			font-size: 15px;
-		}
-		.result__img {
-			width: 100%;
-			max-width: 500px;
-			@include standartFlex(column, center, flex-end);
-			.shared-button {
-				transform: translateY(-90px);
+		.result__item_img {
+			width: 50%;
+			@media (max-width: $media-m) {
+				width: 100%;
 			}
 		}
 	}

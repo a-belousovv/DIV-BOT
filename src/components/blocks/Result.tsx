@@ -1,23 +1,50 @@
-import SharedButton from '../shared/Shared-Button'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+import { Navigation } from 'swiper/modules'
 
 const Result = () => {
 	return (
 		<div className='result'>
 			<div className='block-container'>
-				<div className='result__box'>
-					<h3 className='result__title'>Мой продукты очень любят</h3>
-					<h4 className='result__subtitle'>
-						<span>+20.000 подписчиков </span>
-						за 6 месяцев
-					</h4>
-					<p className='result__text'>
-						*Средняя цена целевого подписчика выходит 24 рубля
-					</p>
-					<div className='result__img'>
-						<img src='/pictures/Result/Result-Instagram-picture.png' alt='' />
-						<SharedButton href='#tariffs' color='blue' text='ОПЛАТИТЬ' />
-					</div>
-				</div>
+				<Swiper navigation={true} modules={[Navigation]} className='mySwiper'>
+					{[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+						return (
+							<SwiperSlide key={item}>
+								<div className='result__slider_item'>
+									<div className='result__item_img'>
+										<img
+											src={`/pictures/Result/${item}/result__slider-1.png`}
+											alt=''
+										/>
+									</div>
+									<div className='result__item_img'>
+										<img
+											src={`/pictures/Result/${item}/result__slider-2.png`}
+											alt=''
+										/>
+									</div>
+									<div className='result__item_img'>
+										<img
+											src={`/pictures/Result/${item}/result__slider-3.png`}
+											alt=''
+										/>
+									</div>
+									<div className='result__item_img'>
+										<img
+											src={`/pictures/Result/${item}/result__slider-4.png`}
+											alt=''
+										/>
+									</div>
+								</div>
+							</SwiperSlide>
+						)
+					})}
+				</Swiper>
 			</div>
 		</div>
 	)

@@ -27,7 +27,7 @@ const TrainingProgram = () => {
 			<div className='block-container'>
 				<div className='program__box'>
 					<div className='program__header'>
-						<h3 className='program__header_title'>Что умеет это бот</h3>
+						<h3 className='program__header_title'>Что умеет этот бот</h3>
 						<p className='program__header_text-lesson-count'>5 действий</p>
 					</div>
 					<div className='program__items'>

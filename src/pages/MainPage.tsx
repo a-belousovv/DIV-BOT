@@ -7,6 +7,7 @@ import Question from '../components/blocks/Question'
 import Help from '../components/blocks/Help'
 import Cart from '../components/blocks/Cart'
 import Footer from '../components/blocks/Footer'
+import Review from '../components/blocks/Review'
 
 const MainPage = () => {
 	return (
@@ -15,6 +16,7 @@ const MainPage = () => {
 			<TrainingProgram />
 			<Tariffs />
 			<Bonus />
+			<Review />
 			<Result />
 			<Question />
 			<Help />

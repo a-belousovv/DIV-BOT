@@ -6,7 +6,7 @@ const Bonus = () => {
 			<div className='block-container'>
 				<div className='bonus__box'>
 					<div className='bonus__content'>
-						<h3 className='bonus__content_title'>+ 2 Жирных бонуса</h3>
+						<h3 className='bonus__content_title'>+ 2 крутых бонуса</h3>
 						<div className='bonus__content_items'>
 							<div className='bonus__content_item'>
 								<p className='bonus__content_text'>
