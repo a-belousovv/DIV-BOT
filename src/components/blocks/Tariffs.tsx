@@ -1,8 +1,6 @@
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { setChoosesCourse, setIsOpenCart } from '../../redux/slices/CartSlice'
+import { useAppSelector } from '../../redux/hooks'
 
 const Tariffs = () => {
-	const dispatch = useAppDispatch()
 	const tariffsItems = [
 		{ id: '1', title: "Подписка на ᗪIᐯ'ный бот в течении 1 месяца;" },
 		{
@@ -21,10 +19,10 @@ const Tariffs = () => {
 		.find((item) => item.courseTitle == tariff)
 		?.countries.find((item) => item.id == choosesUserCountry)
 
-	const handleClick = () => {
-		dispatch(setIsOpenCart(true))
-		dispatch(setChoosesCourse(`${tariff}-id`))
-	}
+	// const handleClick = () => {
+	// dispatch(setIsOpenCart(true))
+	// dispatch(setChoosesCourse(`${tariff}-id`))
+	// }
 	if (!findCourse)
 		findCourse = {
 			id: 'Belarus',
@@ -62,9 +60,12 @@ const Tariffs = () => {
 								)
 							})}
 						</div>
-						<div className='tariffs__button' onClick={() => handleClick()}>
+						<a
+							target='_blank'
+							href='https://t.me/diva_sportbot'
+							className='tariffs__button'>
 							ОПЛАТИТЬ УЧАСТИЕ
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
