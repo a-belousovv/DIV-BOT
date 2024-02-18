@@ -14,8 +14,17 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 				{content.map((item) => {
 					return (
 						<div className='question__content_item' key={item.id}>
-							<div className='question__item_point'></div>
-							<p className='question__item_text'>{item.title}</p>
+							<div className='question__item_info'>
+								<div className='question__item_point'></div>
+								<p className='question__item_text'>{item.title}</p>
+							</div>
+							{item.isAddedImg ? (
+								<div className='question__item_imgs'>
+									{item.imgs?.map((item) => (
+										<img src={item} key={item} />
+									))}
+								</div>
+							) : null}
 						</div>
 					)
 				})}

@@ -6,4 +6,6 @@ export interface questionItemProps {
 export interface qustionItemContent {
 	title: string
 	id: string
+	isAddedImg?: boolean
+	imgs?: string[]
 }

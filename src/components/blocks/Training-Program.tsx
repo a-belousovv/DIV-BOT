@@ -1,48 +1,61 @@
 import SharedButton from '../shared/Shared-Button'
 
 const TrainingProgram = () => {
-	const trainingProgramItems = [
-		{
-			id: '1',
-			title: 'Подбирать персонализированную программу тренировки в зале',
-		},
-		{
-			id: '2',
-			title:
-				'Адаптировать программу тренировок под три запроса: набор массы, похудение, поддержание формы',
-		},
-		{ id: '3', title: 'Давать наглядную инструкцию по выполнению упражнений' },
-		{
-			id: '4',
-			title:
-				'Заменять упражнения, которые вам кажутся сложными на альтернативные',
-		},
-		{
-			id: '5',
-			title: 'Делиться полезными материалами по здоровью, питанию, дисциплине.',
-		},
-	]
 	return (
 		<div className='program' id='program'>
 			<div className='block-container'>
 				<div className='program__box'>
 					<div className='program__header'>
 						<h3 className='program__header_title'>Что умеет этот бот</h3>
-						<p className='program__header_text-lesson-count'>5 действий</p>
 					</div>
 					<div className='program__items'>
-						{trainingProgramItems.map((item) => {
-							return (
-								<div className='program__items_item' key={item.id}>
-									<p className='program__item_point'></p>
-									<p className='program__item_title-lesson'>{item.title}</p>
-								</div>
-							)
-						})}
+						<div className='program__items_item'>
+							<p className='program__item_point'></p>
+							<p className='program__item_title-lesson'>
+								Подбирать персонализированную программу по направлениям: <br />-
+								<i>тренажерный зал (верх\низ\фулбоди с выбором групп мышц)</i>{' '}
+								<br /> -{' '}
+								<i>
+									домашние тренировки (силовые и кардио, с инвентарем и без)
+								</i>{' '}
+								<br /> -{' '}
+								<i>
+									стрейчинг (позвоночник и спина, продольный и поперечный
+									шпагаты)
+								</i>{' '}
+								<br />- <i>работа с осанкой</i> <br /> + разминка, заминка и
+								комплекс на пресс к каждой тренировке
+							</p>
+						</div>
+						<div className='program__items_item'>
+							<p className='program__item_point'></p>
+							<p className='program__item_title-lesson'>
+								Адаптировать программу тренировок в зависимости: <br /> -{' '}
+								<i> от цели (набор массы, похудение, поддержание формы)</i>{' '}
+								<br /> - <i>от времени (30 минут, 60 минут, 90 минут)</i>
+							</p>
+						</div>
+						<div className='program__items_item'>
+							<p className='program__item_point'></p>
+							<p className='program__item_title-lesson'>
+								Давать инструкцию по технике выполнения упражнений в
+								видеоформате + текстовое описание
+							</p>
+						</div>
+						<div className='program__items_item'>
+							<p className='program__item_point'></p>
+							<p className='program__item_title-lesson'>
+								Заменять упражнения на альтернативные, если какого-то тренажера
+								нет в зале, или упражнение кажется сложным для вас, или вы
+								просто не любите его
+							</p>
+						</div>
 						<div className='program__items_item-bonus'>
 							<p className='program__item_text-lesson'>
-								<span>+ БОНУС </span> Чат с комьюнити <br /> подписчиков бота
-								(на время подписки)
+								<span>+ БОНУС для подписчиков бота (на время подписки) </span>
+								чат с единомышленниками и поддержкой экспертов + закрытый
+								телеграм-канал с полезными материалами по здоровью, питанию,
+								дисциплине
 							</p>
 						</div>
 					</div>

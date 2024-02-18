@@ -47,10 +47,8 @@
 			width: 100%;
 			@include standartFlex(column, flex-start, flex-start);
 			gap: 15px;
-			max-height: 280px;
 			flex-wrap: wrap;
 			@media (max-width: $media-l) {
-				max-height: fit-content;
 			}
 			&_item {
 				width: 100%;
@@ -78,6 +76,10 @@
 					padding: 10px 50px 10px 10px;
 					font-family: $montserrat;
 					font-weight: 400;
+					max-width: 55%;
+					@media (max-width: $media-m) {
+						max-width: 100%;
+					}
 					span {
 						color: $red;
 						font-weight: 600;

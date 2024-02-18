@@ -9,10 +9,10 @@ const initialState: СartSliceState = {
 	choosesCourse: '',
 	choosesUserCountry: '',
 	activeCourse: {
-		id: 'Usa',
-		price: 4,
-		discountPrice: 9,
-		priceTitle: 'USD',
+		id: 'Belarus',
+		price: 12,
+		discountPrice: 29,
+		priceTitle: 'BYN',
 		courseTitle: 'Тариф Единый',
 	},
 	courses: [

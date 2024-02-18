@@ -19,16 +19,16 @@
 				width: 100%;
 			}
 			&_items {
-				@include standartFlex(row, center, center);
+				@include standartFlex(row, flex-start, center);
 				gap: 30px;
-				@media (max-width: $media-m) {
+				@media (max-width: 1000px) {
 					flex-direction: column;
 				}
 				.bonus__content_item {
 					width: 50%;
 					@include standartFlex(column, center, center);
 					gap: 30px;
-					@media (max-width: $media-m) {
+					@media (max-width: 1000px) {
 						width: 100%;
 					}
 				}
@@ -37,6 +37,12 @@
 				}
 				.bonus__content_img {
 					width: 100%;
+					height: 900px;
+					img {
+						width: 100%;
+						height: 100%;
+						display: block;
+					}
 				}
 			}
 			&_title {
