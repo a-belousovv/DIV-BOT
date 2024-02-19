@@ -18,6 +18,9 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 								<div className='question__item_point'></div>
 								<p className='question__item_text'>{item.title}</p>
 							</div>
+							{item.isAddedText ? (
+								<p className='question__item_subtext'>{item.text}</p>
+							) : null}
 							{item.isAddedImg ? (
 								<div className='question__item_imgs'>
 									{item.imgs?.map((item) => (

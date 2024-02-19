@@ -7,5 +7,7 @@ export interface qustionItemContent {
 	title: string
 	id: string
 	isAddedImg?: boolean
+	isAddedText?: boolean
 	imgs?: string[]
+	text?: string
 }

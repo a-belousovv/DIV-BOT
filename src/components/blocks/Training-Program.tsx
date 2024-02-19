@@ -10,7 +10,7 @@ const TrainingProgram = () => {
 					</div>
 					<div className='program__items'>
 						<div className='program__items_item'>
-							<p className='program__item_point'></p>
+							<div className='program__item_point'></div>
 							<p className='program__item_title-lesson'>
 								Подбирать персонализированную программу по направлениям: <br />-
 								<i>тренажерный зал (верх\низ\фулбоди с выбором групп мышц)</i>{' '}
@@ -28,7 +28,7 @@ const TrainingProgram = () => {
 							</p>
 						</div>
 						<div className='program__items_item'>
-							<p className='program__item_point'></p>
+							<div className='program__item_point'></div>
 							<p className='program__item_title-lesson'>
 								Адаптировать программу тренировок в зависимости: <br /> -{' '}
 								<i> от цели (набор массы, похудение, поддержание формы)</i>{' '}
@@ -36,14 +36,14 @@ const TrainingProgram = () => {
 							</p>
 						</div>
 						<div className='program__items_item'>
-							<p className='program__item_point'></p>
+							<div className='program__item_point'></div>
 							<p className='program__item_title-lesson'>
 								Давать инструкцию по технике выполнения упражнений в
 								видеоформате + текстовое описание
 							</p>
 						</div>
 						<div className='program__items_item'>
-							<p className='program__item_point'></p>
+							<div className='program__item_point'></div>
 							<p className='program__item_title-lesson'>
 								Заменять упражнения на альтернативные, если какого-то тренажера
 								нет в зале, или упражнение кажется сложным для вас, или вы
@@ -52,7 +52,8 @@ const TrainingProgram = () => {
 						</div>
 						<div className='program__items_item-bonus'>
 							<p className='program__item_text-lesson'>
-								<span>+ БОНУС для подписчиков бота (на время подписки) </span>
+								<span>+ БОНУС для подписчиков бота (на время подписки) </span>{' '}
+								<br />
 								чат с единомышленниками и поддержкой экспертов + закрытый
 								телеграм-канал с полезными материалами по здоровью, питанию,
 								дисциплине

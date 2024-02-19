@@ -55,13 +55,11 @@
 				@include standartFlex(row, center, flex-start);
 				gap: 35px;
 				@media (max-width: $media-m) {
-					flex-direction: column;
-					align-items: flex-start;
 					gap: 15px;
 				}
 				.program__item_point {
 					background-color: $red;
-					width: 10px;
+					min-width: 10px;
 					height: 10px;
 					border-radius: 50%;
 				}
@@ -76,7 +74,7 @@
 					padding: 10px 50px 10px 10px;
 					font-family: $montserrat;
 					font-weight: 400;
-					max-width: 55%;
+					max-width: 65%;
 					@media (max-width: $media-m) {
 						max-width: 100%;
 					}

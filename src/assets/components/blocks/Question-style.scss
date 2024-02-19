@@ -98,7 +98,7 @@
 					transition: 0.4s;
 					.question__content_item {
 						@include standartFlex(column, center, flex-start);
-						gap: 30px;
+						gap: 15px;
 						.question__item_info {
 							width: 100%;
 							gap: 10px;
@@ -112,6 +112,12 @@
 							.question__item_text {
 								font-family: $montserrat;
 							}
+						}
+						.question__item_subtext {
+							font-family: $montserrat;
+							text-align: left;
+							width: 100%;
+							margin-left: 30px;
 						}
 						.question__item_imgs {
 							width: 100%;
