@@ -11,6 +11,7 @@ export interface СartSliceState {
 	choosesUserCountry: string
 	courses: CourseItem[]
 	activeCourse: CountriesItem
+	defaultCourse: CountriesItem
 }
 
 export interface CourseItem {

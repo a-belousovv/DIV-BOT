@@ -1,6 +1,7 @@
 import { useAppSelector } from '../../redux/hooks'
 
 const Tariffs = () => {
+	const defaultCourse = useAppSelector((state) => state.cart.defaultCourse)
 	const tariffsItems = [
 		{ id: '1', title: "Подписка на ᗪIᐯ'ный бот в течении 1 месяца;" },
 		{
@@ -23,14 +24,7 @@ const Tariffs = () => {
 	// dispatch(setIsOpenCart(true))
 	// dispatch(setChoosesCourse(`${tariff}-id`))
 	// }
-	if (!findCourse)
-		findCourse = {
-			id: 'Belarus',
-			price: 12,
-			discountPrice: 29,
-			priceTitle: 'BYN',
-			courseTitle: 'Тариф Единый',
-		}
+	if (!findCourse) findCourse = defaultCourse
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>

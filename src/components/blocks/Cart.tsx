@@ -38,7 +38,7 @@ const Cart = () => {
 			const { data } = await axios.get(
 				`http://ip-api.com/json/${userIpAddress}`
 			)
-			if (!data) dispatch(setChoosesUserCountry('Usa'))
+			if (!data) dispatch(setChoosesUserCountry('Belarus'))
 			dispatch(setChoosesUserCountry(data.country))
 		} catch (e) {
 			console.error(e)

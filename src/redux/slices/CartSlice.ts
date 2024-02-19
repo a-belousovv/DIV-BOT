@@ -15,6 +15,13 @@ const initialState: СartSliceState = {
 		priceTitle: 'BYN',
 		courseTitle: 'Тариф Единый',
 	},
+	defaultCourse: {
+		id: 'Belarus',
+		price: 12,
+		discountPrice: 29,
+		priceTitle: 'BYN',
+		courseTitle: 'Тариф Единый',
+	},
 	courses: [
 		{
 			id: 'tariff-single-id',
