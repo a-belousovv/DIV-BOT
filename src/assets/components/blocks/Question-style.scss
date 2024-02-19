@@ -122,10 +122,12 @@
 							&:first-child {
 								margin-bottom: 30px;
 							}
-							img {
+							.question__imgs_img {
 								width: 50%;
-								@media (max-width: $media-m) {
+								img {
 									width: 100%;
+									height: 100%;
+									display: blcok;
 								}
 							}
 						}

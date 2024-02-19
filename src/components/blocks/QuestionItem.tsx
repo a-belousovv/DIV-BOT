@@ -21,7 +21,9 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 							{item.isAddedImg ? (
 								<div className='question__item_imgs'>
 									{item.imgs?.map((item) => (
-										<img src={item} key={item} />
+										<div className='question__imgs_img'>
+											<img src={item} key={item} />
+										</div>
 									))}
 								</div>
 							) : null}
