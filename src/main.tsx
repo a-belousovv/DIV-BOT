@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainPage from './pages/MainPage.tsx'
 import SecurityPage from './pages/SecurityPage.tsx'
 import Contract from './pages/Contract.tsx'
+import Order from './pages/Order.tsx'
 
 const router = createBrowserRouter([
 	{
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
 	{
 		path: '/public-contract',
 		element: <Contract />,
+	},
+	{
+		path: '/order',
+		element: <Order />,
 	},
 ])
 

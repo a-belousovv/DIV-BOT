@@ -23,6 +23,11 @@ const Footer = () => {
 							Публичная оферта
 						</Link>
 					</div>
+					<div className='footer__content_item'>
+						<Link to='/order' className='footer__item_text'>
+							Описание процедуры заказа услуги
+						</Link>
+					</div>
 				</div>
 				<div className='footer__bottom'>
 					<div className='footer__info'>

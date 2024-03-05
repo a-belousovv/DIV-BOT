@@ -1,13 +1,11 @@
-import { Link } from 'react-router-dom'
+import ReturnButton from '../components/shared/Return-Button'
 
 const SecurityPage = () => {
 	return (
 		<div className='security-page'>
 			<div className='block-container'>
 				<div className='security-page__box'>
-					<Link to='/' className='security-page__button'>
-						Назад
-					</Link>
+					<ReturnButton />
 					<h1 className='security-page__title'>
 						Оплата банковскими картами осуществляется через ОАО «Приорбанка».
 					</h1>
