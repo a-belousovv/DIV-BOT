@@ -42,8 +42,8 @@ const Header = () => {
 								<div className='header__item_point'></div>
 								<div className='header__item_content'>
 									<h3 className='header__content_title'>
-										<span>Комьюнити </span> чат с единомышленниками и поддержкой
-										+ закрытый телеграм-канал с эксклюзивными материалами
+										<span>Комьюнити </span> чат с единомышленниками и поддержкой{' '}
+										<br />+ закрытый телеграм-канал с эксклюзивными материалами
 									</h3>
 								</div>
 							</div>

@@ -10,15 +10,15 @@ const initialState: СartSliceState = {
 	choosesUserCountry: '',
 	activeCourse: {
 		id: 'Belarus',
-		price: 12,
-		discountPrice: 29,
+		price: 29,
+		discountPrice: 50,
 		priceTitle: 'BYN',
 		courseTitle: 'Тариф Единый',
 	},
 	defaultCourse: {
 		id: 'Belarus',
-		price: 12,
-		discountPrice: 29,
+		price: 29,
+		discountPrice: 50,
 		priceTitle: 'BYN',
 		courseTitle: 'Тариф Единый',
 	},
@@ -29,8 +29,8 @@ const initialState: СartSliceState = {
 			countries: [
 				{
 					id: 'Belarus',
-					price: 12,
-					discountPrice: 29,
+					price: 29,
+					discountPrice: 50,
 					priceTitle: 'BYN',
 					courseTitle: 'Тариф Единый',
 				},
