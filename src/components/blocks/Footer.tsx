@@ -28,6 +28,11 @@ const Footer = () => {
 							Описание процедуры заказа услуги
 						</Link>
 					</div>
+					<div className='footer__content_item'>
+						<Link to='/order-help' className='footer__item_text'>
+							Способ оплаты услуги
+						</Link>
+					</div>
 				</div>
 				<div className='footer__bottom'>
 					<div className='footer__info'>
@@ -47,6 +52,7 @@ const Footer = () => {
 						<div className='footer__info contacts'>
 							<p className='footer__info_text'>sportdiva@bk.ru</p>
 							<p className='footer__info_text'>+375447780252</p>
+							<p className='footer__info_text'>режим работы: круглосуточно</p>
 						</div>
 					</div>
 					<div className='footer__content'>

@@ -7,6 +7,7 @@ import MainPage from './pages/MainPage.tsx'
 import SecurityPage from './pages/SecurityPage.tsx'
 import Contract from './pages/Contract.tsx'
 import Order from './pages/Order.tsx'
+import OrderHelp from './pages/Order-Help.tsx'
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 	{
 		path: '/order',
 		element: <Order />,
+	},
+	{
+		path: '/order-help',
+		element: <OrderHelp />,
 	},
 ])
 
