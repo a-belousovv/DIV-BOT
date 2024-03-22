@@ -50,8 +50,13 @@ const Footer = () => {
 							<img src='/icons/Footer/footer__icon.jpg' alt='' />
 						</div>
 						<div className='footer__info contacts'>
-							<p className='footer__info_text'>sportdiva@bk.ru</p>
-							<p className='footer__info_text'>+375447780252</p>
+							<a
+								target='_blank'
+								href='https://t.me/sport_diva'
+								className='footer__info_text'>
+								@sport_diva
+							</a>
+							<p className='footer__info_text link'>+375333283667</p>
 							<p className='footer__info_text'>режим работы: круглосуточно</p>
 						</div>
 					</div>
