@@ -1,3 +1,4 @@
+import { scrollToSection } from '../../helpers/ScrollToSection'
 import SharedButton from '../shared/Shared-Button'
 
 const Header = () => {
@@ -51,10 +52,12 @@ const Header = () => {
 						<h2 className='header__subtitle'>
 							ты приятно <span> УДИВИШЬСЯ </span>результату тренировок
 						</h2>
-						<SharedButton href='#/tariffs' text='УЧАСТВОВАТЬ' color='blue' />
-						<a href='#program' className='header__button header__button-white'>
+						<SharedButton href='#tariffs' text='УЧАСТВОВАТЬ' color='blue' />
+						<div
+							onClick={() => scrollToSection('#program')}
+							className='header__button header__button-white'>
 							СМОТРЕТЬ ПРОГРАММУ
-						</a>
+						</div>
 					</div>
 				</div>
 			</div>

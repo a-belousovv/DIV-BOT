@@ -1,11 +1,14 @@
 import React from 'react'
 import { SharedButtonProps } from '../../@types/props/SharedButtonProps'
+import { scrollToSection } from '../../helpers/ScrollToSection'
 
 const SharedButton: React.FC<SharedButtonProps> = ({ color, text, href }) => {
 	return (
-		<a href={`${href}`} className={`shared-button ${color}`}>
+		<div
+			onClick={() => scrollToSection(href)}
+			className={`shared-button ${color}`}>
 			{text}
-		</a>
+		</div>
 	)
 }
 
