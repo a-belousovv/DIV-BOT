@@ -33,7 +33,7 @@ const Header = () => {
 								<div className='header__item_point'></div>
 								<div className='header__item_content'>
 									<h3 className='header__content_title'>
-										<span>320+ упражнений </span> для дома, зала, стрейчинга и
+										<span>330+ упражнений </span> для дома, зала, стрейчинга и
 										работы с осанкой с пошаговыми видео и текстовыми
 										инструкциями.
 									</h3>

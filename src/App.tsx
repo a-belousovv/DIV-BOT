@@ -1,5 +1,5 @@
 import Bonus from './components/blocks/Bonus'
-import Cart from './components/blocks/Cart'
+
 import Footer from './components/blocks/Footer'
 import Header from './components/blocks/Header'
 import Help from './components/blocks/Help'
@@ -18,7 +18,7 @@ const App = () => {
 			<Result />
 			<Question />
 			<Help />
-			<Cart />
+
 			<Footer />
 		</>
 	)

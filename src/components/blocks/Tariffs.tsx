@@ -1,30 +1,29 @@
+import { useEffect, useState } from 'react'
 import { useAppSelector } from '../../redux/hooks'
+import { getUserCountry } from '../../helpers/getUserCountry'
 
 const Tariffs = () => {
-	const defaultCourse = useAppSelector((state) => state.cart.defaultCourse)
-	const tariffsItems = [
-		{ id: '1', title: "Подписка на ᗪIᐯ'ный бот в течении 1 месяца;" },
-		{
-			id: '2',
-			title: 'Чат участников для обмена опытом, вдохновения и мотивации;',
-		},
-		{ id: '3', title: 'Обратная связь от Алены или ее ассистента в чате;' },
-		{ id: '4', title: 'Доступ к базе материалов.' },
-	]
-
-	const tariff = 'tariff-single'
-	const choosesUserCountry = useAppSelector(
-		(state) => state.cart.choosesUserCountry
+	const [userCountry, setUserCountry] = useState('Belarus')
+	const defaultPrice = useAppSelector((state) => state.tarrifs.defaultPrice)
+	const currentTarrif = 'tarrif-single'
+	const tarrifs = useAppSelector((state) => state.tarrifs.tarrifs)
+	const currentTarrifInfo = tarrifs.find(
+		(item) => item.tarrifId == currentTarrif
 	)
-	let findCourse = useAppSelector((state) => state.cart.courses)
-		.find((item) => item.courseTitle == tariff)
-		?.countries.find((item) => item.id == choosesUserCountry)
+	let currentPrice = currentTarrifInfo?.prices.find(
+		(item) => item.priceId == userCountry
+	)
 
-	// const handleClick = () => {
-	// dispatch(setIsOpenCart(true))
-	// dispatch(setChoosesCourse(`${tariff}-id`))
-	// }
-	if (!findCourse) findCourse = defaultCourse
+	useEffect(() => {
+		const fetchUserCountry = async () => {
+			const userCountry = await getUserCountry()
+
+			setUserCountry(userCountry)
+		}
+		fetchUserCountry()
+	}, [])
+
+	if (!currentPrice) currentPrice = defaultPrice
 	return (
 		<div className='tariffs' id='tariffs'>
 			<div className='block-container'>
@@ -35,21 +34,23 @@ const Tariffs = () => {
 						</h3>
 						<div className='tariffs__left_prices'>
 							<p className='tariffs__prices_price tariffs__prices_price-discount'>
-								{findCourse.discountPrice} {findCourse.priceTitle}
+								{currentPrice?.discountPrice} {currentPrice?.priceTitle}
 							</p>
 							<p className='tariffs__prices_price'>
-								{findCourse.price} {findCourse.priceTitle}
+								{currentPrice?.price} {currentPrice?.priceTitle}
 							</p>
 						</div>
 					</div>
 					<div className='tariffs__right'>
 						<p className='tariffs__right_title'>Что входит</p>
 						<div className='tariffs__right_items'>
-							{tariffsItems.map((item) => {
+							{currentTarrifInfo?.tarrifPossibilities.map((item) => {
 								return (
-									<div className='tariffs__items_item' key={item.id}>
+									<div className='tariffs__items_item' key={item.possibilityId}>
 										<div className='tariffs__item_point'></div>
-										<p className='tariffs__item_title'>{item.title}</p>
+										<p className='tariffs__item_title'>
+											{item.possibilityTitle}
+										</p>
 									</div>
 								)
 							})}

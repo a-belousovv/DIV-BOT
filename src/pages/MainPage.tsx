@@ -5,7 +5,6 @@ import Bonus from '../components/blocks/Bonus'
 import Result from '../components/blocks/Result'
 import Question from '../components/blocks/Question'
 import Help from '../components/blocks/Help'
-import Cart from '../components/blocks/Cart'
 import Footer from '../components/blocks/Footer'
 import Review from '../components/blocks/Review'
 
@@ -20,7 +19,6 @@ const MainPage = () => {
 			<Result />
 			<Question />
 			<Help />
-			<Cart />
 			<Footer />
 		</>
 	)
