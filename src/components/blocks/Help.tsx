@@ -9,7 +9,7 @@ const Help = () => {
 					<div className='help__items'>
 						<a
 							target='_blank'
-							href='https://t.me/B_Elena'
+							href='https://t.me/sport_diva'
 							className='help__items_item'>
 							<div className='help__item_img'>
 								<img src='/icons/Help/telegram-icon.svg' alt='' />
