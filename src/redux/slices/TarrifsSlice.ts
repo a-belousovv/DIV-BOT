@@ -27,19 +27,19 @@ const initialState: TarrifsSliceInitialState = {
 			],
 			prices: [
 				{
-					priceId: 'Belarus',
+					priceId: 'Беларусь',
 					price: 29,
 					discountPrice: 50,
 					priceTitle: 'BYN',
 				},
 				{
-					priceId: 'Russia',
+					priceId: 'Россия',
 					price: 850,
 					discountPrice: 1500,
 					priceTitle: 'RUB',
 				},
 				{
-					priceId: 'United States',
+					priceId: 'Соединенные Штаты Америки',
 					price: 9,
 					discountPrice: 15,
 					priceTitle: 'USD',
@@ -48,7 +48,7 @@ const initialState: TarrifsSliceInitialState = {
 		},
 	],
 	defaultPrice: {
-		priceId: 'Belarus',
+		priceId: 'Беларусь',
 		price: 29,
 		discountPrice: 50,
 		priceTitle: 'BYN',

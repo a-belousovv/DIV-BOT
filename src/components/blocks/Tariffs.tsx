@@ -3,7 +3,7 @@ import { useAppSelector } from '../../redux/hooks'
 import { getUserCountry } from '../../helpers/getUserCountry'
 
 const Tariffs = () => {
-	const [userCountry, setUserCountry] = useState('Belarus')
+	const [userCountry, setUserCountry] = useState('Беларусь')
 	const defaultPrice = useAppSelector((state) => state.tarrifs.defaultPrice)
 	const currentTarrif = 'tarrif-single'
 	const tarrifs = useAppSelector((state) => state.tarrifs.tarrifs)
@@ -15,12 +15,12 @@ const Tariffs = () => {
 	)
 
 	useEffect(() => {
-		const fetchUserCountry = async () => {
-			const userCountry = await getUserCountry()
-
-			setUserCountry(userCountry)
-		}
-		fetchUserCountry()
+		getUserCountry().then((country) => {
+			if (typeof country == 'string') {
+				setUserCountry(country)
+				console.log(country)
+			}
+		})
 	}, [])
 
 	if (!currentPrice) currentPrice = defaultPrice
