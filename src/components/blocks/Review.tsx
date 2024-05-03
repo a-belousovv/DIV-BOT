@@ -1,6 +1,6 @@
 const Review = () => {
 	return (
-		<div className='review'>
+		<section className='review'>
 			<div className='block-container'>
 				<div className='review__box'>
 					<div className='review__content'>
@@ -12,11 +12,11 @@ const Review = () => {
 						</p>
 					</div>
 					<div className='review__img'>
-						<img src='/pictures/Review/review-img.png' alt='' />
+						<img src='/pictures/Review/review-img.webp' alt='Картинка инстаграмма с количеством отзывов' />
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

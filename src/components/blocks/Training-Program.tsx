@@ -2,7 +2,7 @@ import SharedButton from '../shared/Shared-Button'
 
 const TrainingProgram = () => {
 	return (
-		<div className='program' id='program'>
+		<section className='program' id='program'>
 			<div className='block-container'>
 				<div className='program__box'>
 					<div className='program__header'>
@@ -62,7 +62,7 @@ const TrainingProgram = () => {
 					<SharedButton href='#tariffs' text='УЧАСТВОВАТЬ' color='blue' />
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

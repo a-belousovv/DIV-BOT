@@ -3,29 +3,28 @@ import SharedButton from '../shared/Shared-Button'
 
 const Header = () => {
 	return (
-		<div className='header'>
+		<header className='header'>
 			<div className='block-container'>
 				<div className='header__box'>
 					<div className='header__background'>
 						<img
-							// src='/backgrounds/Header/header-bg-3.jpg'
-							src='/backgrounds/Header/header-bg-laptop.jpg'
-							alt=''
+							src='/backgrounds/Header/header-bg-laptop.webp'
+							alt='Картинка заднего фона для laptop устройств'
 							className='header__background header__background-laptop'
 						/>
 						<img
-							src='/backgrounds/Header/header-bg-media-3.jpg'
+							src='/backgrounds/Header/header-bg-media-3.webp'
 							className='header__background header__background-mobile'
-							alt=''
+							alt='Картинка заднего фона для mobile устройств'
 						/>
 					</div>
 					<div className='header__content'>
 						<div className='header__content_slogan'>
-							<p className='header__slogan_text'>ᗪIᐯ'ный бот</p>
-							<h1 className='header__title-course-name'>
+							<h1 className='header__slogan_text'>ᗪIᐯ'ный бот</h1>
+							<p className='header__title-course-name'>
 								<span>авторский бот</span> Алёны Окотчик с тренировками для зала
 								и дома
-							</h1>
+							</p>
 						</div>
 
 						<div className='header__lessons'>
@@ -61,7 +60,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</header>
 	)
 }
 

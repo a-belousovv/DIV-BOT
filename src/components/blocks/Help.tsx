@@ -1,6 +1,6 @@
 const Help = () => {
 	return (
-		<div className='help'>
+		<section className='help'>
 			<div className='block-container'>
 				<div className='help__box'>
 					<h3 className='help__title'>
@@ -12,7 +12,7 @@ const Help = () => {
 							href='https://t.me/sport_diva'
 							className='help__items_item'>
 							<div className='help__item_img'>
-								<img src='/icons/Help/telegram-icon.svg' alt='' />
+								<img src='/icons/Help/telegram-icon.svg' alt='Иконка телеграма' />
 							</div>
 							<p className='help__item_title'>
 								Напишите мне <br /> в Telegram
@@ -21,7 +21,7 @@ const Help = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

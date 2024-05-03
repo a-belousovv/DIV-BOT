@@ -1,6 +1,5 @@
 export interface TarrifsSliceInitialState {
 	tarrifs: TarrifItem[]
-	defaultPrice: priceItem
 }
 
 interface TarrifItem {
@@ -8,6 +7,7 @@ interface TarrifItem {
 	tarrifTitle: string
 	tarrifPossibilities: possibilityItem[]
 	prices: priceItem[]
+	defaultPrice: priceItem
 }
 
 interface possibilityItem {

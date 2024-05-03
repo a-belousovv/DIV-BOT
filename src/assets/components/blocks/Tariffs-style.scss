@@ -32,7 +32,13 @@
 				line-height: 1;
 				@media (max-width: $media-m) {
 					font-size: 36px;
+					max-width: 100%;
 				}
+				@media(max-width: $media-l) {
+					text-align: center;
+				}
+				max-width: 280px
+				
 			}
 			.tariffs__left_prices {
 				@include standartFlex(column, flex-start, flex-start);

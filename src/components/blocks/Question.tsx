@@ -30,8 +30,8 @@ const Question = () => {
 						'Доступ к персональному “тренеру” в твоем телефоне с индивидуальным подходом. Подписка стоит МЕНЬШЕ, чем одна тренировка с тренером, а приносит ценности в 10 раз выше.',
 					text: 'вот что говорят о моих бесплатных продуктах👇',
 					imgs: [
-						'/pictures/Question/img-1.png',
-						'/pictures/Question/img-2.png',
+						'/pictures/Question/img-1.webp',
+						'/pictures/Question/img-2.webp',
 					],
 					isAddedImg: true,
 					isAddedText: true,
@@ -107,14 +107,14 @@ const Question = () => {
 				{
 					id: '15',
 					title: 'Ты можешь купить подписку на новый месяц в любой момент 👇',
-					imgs: ['/pictures/Question/img-3.png'],
+					imgs: ['/pictures/Question/img-3.webp'],
 					isAddedImg: true,
 				},
 			],
 		},
 	]
 	return (
-		<div className='question'>
+		<section className='question'>
 			<div className='block-container'>
 				<div className='question__box'>
 					<h3 className='question__title'>У тебя могли остаться вопросы</h3>
@@ -132,7 +132,7 @@ const Question = () => {
 					<SharedButton href='#tariffs' color='blue' text='УЧАСТВОВАТЬ' />
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

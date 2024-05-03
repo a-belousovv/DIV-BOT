@@ -25,7 +25,7 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 								<div className='question__item_imgs'>
 									{item.imgs?.map((item) => (
 										<div className='question__imgs_img' key={item}>
-											<img src={item} key={item} />
+											<img src={item} key={item} alt='Картинка для ответа на вопрос' />
 										</div>
 									))}
 								</div>

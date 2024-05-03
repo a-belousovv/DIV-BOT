@@ -10,7 +10,7 @@ import Review from '../components/blocks/Review'
 
 const MainPage = () => {
 	return (
-		<>
+		<main>
 			<Header />
 			<TrainingProgram />
 			<Tariffs />
@@ -20,7 +20,7 @@ const MainPage = () => {
 			<Question />
 			<Help />
 			<Footer />
-		</>
+		</main>
 	)
 }
 

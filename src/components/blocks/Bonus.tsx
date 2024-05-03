@@ -2,7 +2,7 @@ import SharedButton from '../shared/Shared-Button'
 
 const Bonus = () => {
 	return (
-		<div className='bonus'>
+		<section className='bonus'>
 			<div className='block-container'>
 				<div className='bonus__box'>
 					<div className='bonus__content'>
@@ -20,7 +20,7 @@ const Bonus = () => {
 									мной.
 								</p>
 								<div className='bonus__content_img'>
-									<img src='/pictures/Bonus/Bonus-left.jpg' alt='' />
+									<img src='/pictures/Bonus/Bonus-left.webp' alt='Первый бонус' />
 								</div>
 							</div>
 							<div className='bonus__content_item'>
@@ -34,7 +34,7 @@ const Bonus = () => {
 									будет увеличиваться соразмерно ценности для новых участников.
 								</p>
 								<div className='bonus__content_img'>
-									<img src='/pictures/Bonus/Bonus-right.png' alt='' />
+									<img src='/pictures/Bonus/Bonus-right.webp' alt='Второй бонус' />
 								</div>
 							</div>
 						</div>
@@ -42,7 +42,7 @@ const Bonus = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

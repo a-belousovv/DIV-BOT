@@ -143,11 +143,11 @@ const Contract = () => {
 					<div className='public-contract__list'>
 						{contractInfo.map((item) => {
 							return (
-								<div className='public-contract__list_item'>
+								<div className='public-contract__list_item' key={item.id}>
 									<h3 className='public-contract__item_title'>{item.title}</h3>
-									{item.subtitles.map((subtitle) => {
+									{item.subtitles.map((subtitle,i) => {
 										return (
-											<p className='public-contract__item_text'>{subtitle}</p>
+											<p key={i} className='public-contract__item_text'>{subtitle}</p>
 										)
 									})}
 								</div>

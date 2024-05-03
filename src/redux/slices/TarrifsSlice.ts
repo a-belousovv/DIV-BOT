@@ -39,20 +39,20 @@ const initialState: TarrifsSliceInitialState = {
 					priceTitle: 'RUB',
 				},
 				{
-					priceId: 'Соединенные Штаты Америки',
+					priceId: 'Соединённые Штаты Америки',
 					price: 9,
 					discountPrice: 15,
 					priceTitle: 'USD',
 				},
 			],
+			defaultPrice: {
+				priceId: 'Беларусь',
+				price: 29,
+				discountPrice: 50,
+				priceTitle: 'BYN',
+			}
 		},
-	],
-	defaultPrice: {
-		priceId: 'Беларусь',
-		price: 29,
-		discountPrice: 50,
-		priceTitle: 'BYN',
-	},
+	]
 }
 
 export const tarrifsSlice = createSlice({

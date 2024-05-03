@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+	const handleLink = () => {
+		window.scrollTo(0, 0)
+	}
 	return (
-		<div className='footer'>
+		<footer className='footer'>
 			<div className='footer__box'>
 				<div className='footer__top'>
 					<div className='footer__content_item'>
-						<Link to='/security' className='footer__item_text'>
+						<Link onClick={handleLink} to='/security' className='footer__item_text'>
 							Безопасность платежей
 						</Link>
 					</div>
@@ -19,17 +22,17 @@ const Footer = () => {
 						</a>
 					</div>
 					<div className='footer__content_item'>
-						<Link to='/public-contract' className='footer__item_text'>
+						<Link onClick={handleLink} to='/public-contract' className='footer__item_text'>
 							Публичная оферта
 						</Link>
 					</div>
 					<div className='footer__content_item'>
-						<Link to='/order' className='footer__item_text'>
+						<Link onClick={handleLink} to='/order' className='footer__item_text'>
 							Описание процедуры заказа услуги
 						</Link>
 					</div>
 					<div className='footer__content_item'>
-						<Link to='/order-help' className='footer__item_text'>
+						<Link onClick={handleLink}	 to='/order-help' className='footer__item_text'>
 							Способ оплаты услуги
 						</Link>
 					</div>
@@ -47,7 +50,7 @@ const Footer = () => {
 					</div>
 					<div className='footer__items'>
 						<div className='footer__img'>
-							<img src='/icons/Footer/footer__icon.jpg' alt='' />
+							<img src='/icons/Footer/footer__icon.webp' alt='Аватар владельца сайта' />
 						</div>
 						<div className='footer__info contacts'>
 							<a
@@ -62,12 +65,12 @@ const Footer = () => {
 					</div>
 					<div className='footer__content'>
 						<div className='footer__content_bottom'>
-							<img src='/pictures/Footer/footer-banks.png' alt='' />
+							<img src='/pictures/Footer/footer-banks.webp' alt='Картинка банков' />
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 	)
 }
 
