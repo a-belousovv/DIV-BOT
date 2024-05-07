@@ -2,7 +2,7 @@ export interface TarrifsSliceInitialState {
 	tarrifs: TarrifItem[]
 }
 
-interface TarrifItem {
+export interface TarrifItem {
 	tarrifId: string
 	tarrifTitle: string
 	tarrifPossibilities: possibilityItem[]
