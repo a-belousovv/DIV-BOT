@@ -33,6 +33,9 @@
 				flex-direction: column;
 				align-items: flex-start;
 				gap: 10px;
+				@media (max-width: $media-m) {
+					flex-direction: row;
+				}
 			}
 			&_title {
 				color: $white;
