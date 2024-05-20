@@ -18,6 +18,7 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 								<div className='question__item_point'></div>
 								<p className='question__item_text'>{item.title}</p>
 							</div>
+
 							{item.isAddedText ? (
 								<p className='question__item_subtext'>{item.text}</p>
 							) : null}
@@ -25,7 +26,11 @@ const QuestionItem: React.FC<questionItemProps> = ({ title, content }) => {
 								<div className='question__item_imgs'>
 									{item.imgs?.map((item) => (
 										<div className='question__imgs_img' key={item}>
-											<img src={item} key={item} alt='Картинка для ответа на вопрос' />
+											<img
+												src={item}
+												key={item}
+												alt='Картинка для ответа на вопрос'
+											/>
 										</div>
 									))}
 								</div>

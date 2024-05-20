@@ -6,10 +6,11 @@ interface Props {
 	userCountry: string
 }
 const TariffsItem: React.FC<Props> = ({ data, userCountry }) => {
-	const currentPrice = data.prices.find(
+	const countryPrice = data.prices.find(
 		(price) => price.priceId === userCountry
 	)
-
+	const defaultPrice = data.defaultPrice
+	const currentPrice = countryPrice ? countryPrice : defaultPrice
 	return (
 		<div className='tariffs__item'>
 			<div className='tariffs__left'>

@@ -4,7 +4,7 @@ import TariffsItem from './TariffsItem'
 import { useAppSelector } from '../../redux/hooks'
 
 const Tariffs = () => {
-	const [userCountry, setUserCountry] = useState('')
+	const [userCountry, setUserCountry] = useState('Беларусь')
 	const tarrifs = useAppSelector((state) => state.tarrifs.tarrifs)
 	useEffect(() => {
 		getUserCountry().then((country) => {
